@@ -1,0 +1,20 @@
+# ROS2 / Colcon
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# Docker / Ambiente
+.env
+.env.*
+!.env.example
+
+# Arquivos temporários
+*.swp
+*.tmp
+*~
