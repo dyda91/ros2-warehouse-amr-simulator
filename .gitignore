@@ -1,4 +1,4 @@
-# ROS2 / Colcon
+# ROS2 / colcon
 build/
 install/
 log/
@@ -7,14 +7,21 @@ log/
 __pycache__/
 *.pyc
 .pytest_cache/
-.venv/
-
-# Docker / Ambiente
-.env
-.env.*
-!.env.example
 
 # Arquivos temporários
 *.swp
-*.tmp
+*.swo
 *~
+.DS_Store
+
+# Configurações locais e segredos
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Capturas e gravações temporárias
+*.bag
+*.db3
+*.mcap

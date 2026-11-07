@@ -1,0 +1,41 @@
+
+name: warehouse-amr-course
+
+services:
+  ros2-dev:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+
+    image: warehouse-amr-course:jazzy
+    container_name: warehouse-amr-course-dev
+
+    environment:
+      DISPLAY: ${DISPLAY}
+      QT_X11_NO_MITSHM: "1"
+      ROS_DOMAIN_ID: "47"
+      ROS_LOCALHOST_ONLY: "1"
+
+    volumes:
+      - ./:/workspace
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+
+    working_dir: /workspace
+
+    stdin_open: true
+    tty: true
+
+    mem_limit: 5g
+    cpus: 4
+
+    security_opt:
+      - no-new-privileges:true
+
+    command: sleep infinity
+
+    devices:
+      - /dev/dri/card1:/dev/dri/card1
+      - /dev/dri/renderD128:/dev/dri/renderD128
+
+    group_add:
+      - "110"
