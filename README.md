@@ -34,8 +34,8 @@ In development - Module 1: Environment Setup.
 - [x] Comunicação ROS2 com talker/listener
 - [x] TurtleBot3 Waffle inserido no Gazebo
 - [x] Controle de movimento via /cmd_vel
-- [ ] Verificação da odometria
-- [ ] Visualização do LiDAR no RViz2
+- [x] Verificação da odometria
+- [x] Visualização do LiDAR no RViz2
 - [ ] Construção do armazém virtual
 - [ ] Mapeamento com SLAM
 - [ ] Navegação autônoma com Nav2
