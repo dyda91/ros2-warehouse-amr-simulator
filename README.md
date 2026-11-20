@@ -1,42 +1,52 @@
-# ROS2 Warehouse AMR Simulator
+# API de Biblioteca — Exercício de Testes Automatizados e TDD
 
-Autonomous Mobile Robot simulation for warehouse environments.
+Projeto de formação em backend com **TypeScript, Express, Sequelize e Jest**, organizado em torno de uma API HTTP para gestão de livros, usuários e empréstimos de uma biblioteca.
 
-## Technologies
+## Contexto
 
-- ROS2 Jazzy
-- Gazebo Harmonic
-- Nav2
-- Python
-- Docker
+Este repositório foi desenvolvido como parte de uma atividade de testes automatizados. A proposta do exercício envolve recuperar testes, completar casos pendentes e implementar funcionalidades de API orientadas por testes (TDD).
 
-## Project Status
+> Este projeto é uma atividade acadêmica/de formação. O enunciado original não deve ser confundido com documentação de produção nem com a autoria integral do código-base.
 
-In development - Module 1: Environment Setup.
+## Tecnologias
 
-## Goals
+- TypeScript e Node.js
+- Express
+- Sequelize
+- Jest e ts-jest
+- SQLite para ambiente local/testes, conforme configuração do projeto
+- PostgreSQL disponível entre as dependências
 
-- Simulate an autonomous mobile robot
-- Implement mapping and localization
-- Develop autonomous navigation
-- Create a warehouse mission manager
-- Test obstacle avoidance and recovery behaviors
+## Estrutura
 
+```text
+src/           # Código da aplicação
+tests/         # Casos de teste
+docs/          # Documentação adicional
+jest.config.ts # Configuração do Jest
+```
 
+## Execução dos testes
 
-## Progresso do desenvolvimento
+O repositório utiliza Yarn e define o comando de teste no `package.json`:
 
-### Ambiente de simulação
+```bash
+yarn install
+yarn test
+```
 
-- [x] Ambiente Docker com ROS2 Jazzy
-- [x] Gazebo Harmonic funcionando
-- [x] Aceleração gráfica Intel no contêiner
-- [x] Comunicação ROS2 com talker/listener
-- [x] TurtleBot3 Waffle inserido no Gazebo
-- [x] Controle de movimento via /cmd_vel
-- [x] Verificação da odometria
-- [x] Visualização do LiDAR no RViz2
-- [ ] Construção do armazém virtual
-- [ ] Mapeamento com SLAM
-- [ ] Navegação autônoma com Nav2
-- [ ] Gerenciador de missões em Python
+> Os testes não foram executados durante esta revisão; a execução depende das configurações e dependências locais do repositório. Consulte os arquivos em `docs/` e o enunciado do projeto para requisitos adicionais.
+
+## O que este projeto demonstra
+
+- Leitura de requisitos de API HTTP.
+- Desenvolvimento e manutenção de testes automatizados.
+- Organização de código TypeScript para endpoints, regras de negócio e persistência.
+- Aplicação de conceitos de TDD no contexto de um exercício de backend.
+
+## Melhorias futuras
+
+- Documentar quais tarefas foram implementadas pessoalmente e quais vieram do código inicial.
+- Publicar o resultado de uma execução recente da suíte de testes.
+- Criar um workflow de CI para validar testes automaticamente.
+- Separar documentação de uso do enunciado original.
